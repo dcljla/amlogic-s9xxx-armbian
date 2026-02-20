@@ -183,7 +183,7 @@ jobs:
           docker_image: ophub/armbian-${{ inputs.docker_image }}:arm64
 
       - name: Upload Kernel to Release
-        uses: ncipollo/release-action@main
+        uses: dcljla/release-action@main
         if: ${{ env.PACKAGED_STATUS == 'success' && !cancelled() }}
         with:
           tag: kernel_stable
